@@ -1,0 +1,25 @@
+#!/bin/bash
+
+action=${1:-default}
+
+#echo "action=$action"
+
+case $action in
+on)
+    echo -n "Turn on:"
+    ~/bin/turnOn_keyLight.py
+    ;;
+off)
+    echo -n "Turn Off:"
+    ~/bin/turnOff_keyLight.py	
+    ;;
+default)
+    echo "Toggle"
+    ~/bin/toggle_keyLight.py
+    ;;
+*)
+  echo "Usage"
+  echo "$0 <on|off>"
+  ;;
+esac
+
