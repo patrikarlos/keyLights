@@ -9,10 +9,15 @@ def main(argv):
     colorChange = int(sys.argv[1])
     
     for lights in allLights:
+        print(f"{lights.name}")  
+        print(f"Brightness = {lights.isBrightness}")
         if colorChange > 0:
+            print(f'increase {colorChange}')
             lights.incBrightness(colorChange)
         else:
-            lights.decBrightness(colorChange)
+            bob = abs(colorChange)
+            print(f'decrease {bob}')
+            lights.decBrightness(bob)
 
 if __name__ == '__main__':
     #    print(f'Args : {len(sys.argv)} ')
